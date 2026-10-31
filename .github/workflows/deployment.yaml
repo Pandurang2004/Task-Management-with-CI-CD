@@ -10,18 +10,18 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            -name: Checkout code 
-             uses: actions/checkout@v4
+            - name: Checkout code 
+              uses: actions/checkout@v4
 
-            -name: Setup python
-             uses: actions/setup-python@v5
+            - name: Setup python
+              uses: actions/setup-python@v5
 
-            -name: Install dependencies
-             run: 
-              pip install django
+            - name: Install dependencies
+              run: 
+                pip install django
             
 
-            -name: Run Tests
-             run:
-              python manage.py test
+            - name: Run Tests
+              run:
+                python manage.py test
             
