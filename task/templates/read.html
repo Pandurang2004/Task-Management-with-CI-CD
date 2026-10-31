@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+You can add new task from here 
+
+<a href="{% url 'add_task' %}"><button > Add task </button></a>  <br> <br>
+
+{% for i in record %}
+
+  Task Name : {{i.task_name}}   <br> 
+  Task Description : {{i.descp}}  <br> 
+  Task time:  {{i.task_added_at}}  <br> 
+  Task Status :   {% if i.task_status %} Completed  {% else %}  Pending {% endif %} <br> <br>
+
+  <a href="{% url 'update_task' i.id %}"><button type='submit'>Update </button></a>
+  <a href="{% url 'delete_task' i.id %}"><button type='submit'>Delete </button></a>
+ <br> <br>
+ <hr>
+
+{% endfor %}
+ 
+    
+{% endblock %}

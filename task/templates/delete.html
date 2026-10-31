@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+    <form method= "POST">
+        {% csrf_token %}
+        <h1>Are You sure You want to delete? </h1>
+
+        <button type='submit'>Yes</button> 
+        <a href= "{% url 'read_task' %}">NO</a>
+
+    </form>
+     
+{% endblock %}

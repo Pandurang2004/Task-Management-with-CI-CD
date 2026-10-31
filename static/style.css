@@ -1,0 +1,19 @@
+nav ul{
+    background-color: orange;
+    height: 150px;
+    width: 100%;
+    color: red;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+ 
+   
+    <center>
+     <h1>Add Task</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+        <table border="2">
+             {{ form.as_table }} 
+        </table>
+
+        <button type="submit">Add Task</button>
+    </form>
+    </center>
+    
+{% endblock %}
